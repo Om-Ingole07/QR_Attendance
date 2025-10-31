@@ -1,9 +1,18 @@
 <?php
-$servername = "sql110.infinityfree.com";
-$username   = "if0_40235568";
-$password   = "QrApp2025";
-$dbname     = "if0_40235568_epiz_12345678_mydb";
+// Database connection details (use your Render credentials)
+$host = "dpg-abc12345.render.com";  // change this
+$port = "5432";
+$dbname = "attendance_system";      // your database name
+$user = "attendance_user";          // your database user
+$password = "Abc12345XYZ";          // your database password
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-if (!$conn) die("❌ Database connection failed: " . mysqli_connect_error());
+// Create connection
+$conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
+
+// Check connection
+if (!$conn) {
+    die("Database connection failed: " . pg_last_error());
+} else {
+    // echo "Connected successfully!";  // optional
+}
 ?>
