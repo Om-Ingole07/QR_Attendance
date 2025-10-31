@@ -1,0 +1,170 @@
+/* ============================================
+   UNIVERSAL STYLING FOR ATTENDANCE SYSTEM
+   Works on mobile, tablet, and desktop
+   ============================================ */
+
+/* Reset defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #333;
+    padding: 20px;
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+    background: #ffffffcc;
+    backdrop-filter: blur(5px);
+    width: 90%;
+    max-width: 450px;
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: #2d3436;
+}
+
+/* ---------- BUTTONS ---------- */
+button, .btn, input[type="submit"] {
+    background: linear-gradient(90deg, #0984e3, #00cec9);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    margin: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover, .btn:hover, input[type="submit"]:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #00cec9, #0984e3);
+}
+
+/* ---------- FORMS ---------- */
+input[type="text"], input[type="email"], input[type="password"], input[type="date"], select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+label {
+    font-weight: 500;
+    color: #2d3436;
+}
+
+/* ---------- TABLES ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #0984e3;
+    color: white;
+    font-weight: 600;
+}
+
+tr:hover {
+    background: #f1f2f6;
+}
+
+/* ---------- ALERT MESSAGES ---------- */
+.message {
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.success {
+    background: #55efc4;
+    color: #1e272e;
+}
+
+.warning {
+    background: #ffeaa7;
+    color: #2d3436;
+}
+
+.error {
+    background: #fab1a0;
+    color: #2d3436;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 25px 20px;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+
+    button, .btn, input[type="submit"] {
+        width: 100%;
+        margin: 10px 0;
+        font-size: 15px;
+    }
+
+    h1, h2 {
+        font-size: 22px;
+    }
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- BACKGROUND DECOR ---------- */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.3), transparent 70%),
+                radial-gradient(circle at bottom right, rgba(255,255,255,0.3), transparent 70%);
+    z-index: -1;
+}
